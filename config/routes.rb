@@ -6,7 +6,10 @@ Rails.application.routes.draw do
   namespace :api do
     get '/products' => 'products#index'
     get '/products/:id' => 'products#show'
-    get '/products' => 'recipes#create'
+    post '/products' => 'recipes#create'
+    patch '/products/:id' => 'products#update'
+    delete '/products/:id' => 'products#destroy'
+
 
     patch '/products/:id' => 'products#update'
   end
