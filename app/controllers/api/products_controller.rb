@@ -15,9 +15,12 @@ class Api::ProductsController < ApplicationController
       name: params[:name], 
       price: params[:price], 
       image_url: params[:image_url],
-      depscition: params[:description])
-    @product.save
-    render 'show.json.jb'
+      depscription: params[:description])
+    if  @product.save
+      render 'show.json.jb'
+    else 
+      render json: {errors: @product.errors.full_messages}, status: :unprocessable_entity
+    end
   end
 
   def update
@@ -26,9 +29,12 @@ class Api::ProductsController < ApplicationController
     @name = params[:name], 
     @price = params[:price], 
     @image_url = params[:image_url],
-    @depscition = params[:description]
-    @product.save
-    render 'show.json.jb'
+    @depscription = params[:description]
+    if  @product.save
+      render 'show.json.jb'
+    else 
+      render json: {errors: @product.errors.full_messages}, status: :unprocessable_entity
+    end
   end 
 
   def destroy
