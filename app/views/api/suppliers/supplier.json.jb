@@ -1,0 +1,7 @@
+{
+  name: supplier.name,
+  email: supplier.email,
+  phone_numer: supplier.phone_numer,
+  id: supplier.id
+
+}
