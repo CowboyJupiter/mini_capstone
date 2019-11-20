@@ -1,9 +1,17 @@
 class Api::OrdersController < ApplicationController
+
+  
+
   def create 
-    @order = Order.new (
-      user_id: params[:user_id],
+
+    product =
+
+    @order = Order.new(
+      user_id: current_user.id,
       product_id: params[:product_id],
-      quatity: params[:quantity])
-    order.save
+      quantity: params[:quantity])
+
+    @order.save
+    render 'order.json.jb'
   end   
 end
