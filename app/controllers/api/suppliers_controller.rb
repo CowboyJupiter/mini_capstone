@@ -5,7 +5,7 @@ class Api::SuppliersController < ApplicationController
       name: params[:name], 
       email: params[:email],
       phone_number: params[:phone_number])
-    @suppliers.save
+    @supplier.save
 
     render 'supplier.json.jb'
   end
@@ -17,7 +17,8 @@ class Api::SuppliersController < ApplicationController
     @id = Supplier.find_by(id: the_id)
     @name = params[:name], 
     @email = params[:email], 
-    @phone_number = params[:phone_number],
+    @phone_number = params[:phone_number]
+
     render 'supplier.json.jb'
   end 
 
@@ -26,7 +27,7 @@ class Api::SuppliersController < ApplicationController
     @supplier.destroy
     render 'destroy.json.jb'
   end
-end
+
 
 
 
