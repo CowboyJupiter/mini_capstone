@@ -14,10 +14,13 @@ Rails.application.routes.draw do
     post "/users" => "users#create"
 
     post "/suppliers" => "suppliers#create"
+    get "/supplier" => "suppliers#index"
 
     post "/sessions" => "sessions#create"
 
     post "/orders" => "orders#create"
+
+
 
   end
 
