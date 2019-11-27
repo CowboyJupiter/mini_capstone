@@ -5,6 +5,15 @@ class ProductsController < ApplicationController
     render show.html.erb
   end
 
+  def index
+    @products = Product.all 
+    render 'index.html.erb'
+  end
 
+  def new
+    render 'new.html.erb'
+  end
+
+  
 
 end
