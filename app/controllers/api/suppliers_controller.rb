@@ -14,7 +14,7 @@ class Api::SuppliersController < ApplicationController
 
   def update
     
-    @id = Supplier.find_by(id: the_id)
+    @id = Supplier.find_by(id: supplier_id)
     @name = params[:name], 
     @email = params[:email], 
     @phone_number = params[:phone_number]

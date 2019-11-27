@@ -1,0 +1,2 @@
+@carted_products.map do |carted_product|
+  

@@ -4,15 +4,15 @@ class Product < ApplicationRecord
   # validates :description, length: {minimum: 10}
 
   has_many :images
-  has_many :orders
+  has_many :orders, through: :carted_product
   belongs_to :supplier
-  has_many :categories, through: :product_categories
+
   has_many :product_categories
+  has_many :categories, through: :product_categories
 
-
-  def supplier
-    Suppler.find_by(id: supplier_id)
-  end
+  # def supplier
+  #   supplier = Supplier.find_by(id: supplier_id)
+  # end
 
 
   def is_discounted?
