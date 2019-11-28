@@ -1,0 +1,9 @@
+<form action="/recipes/<%= @product %>" medthod= "post">
+  <input type= "hidden" name="_method" value="patch">
+  <p>name: <input type="text" name="name" value="<%= @product.name %>"></p>
+  <p>price: <input type="number" name="price" vale="<%= product.price %>"></p>
+  <p>image_url: <input type="text" name="image_url" value= "<%=product.image_url%>"></p>
+  <p>description: <input type="text" name="description" value="<%= product.description%>"></p>
+
+  <input typle="submit" value="update a product">
+</form>

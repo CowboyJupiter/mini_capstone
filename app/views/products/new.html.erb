@@ -4,4 +4,9 @@
   <p>image_url: <input type="text" name="image_url"></p>
   <p>description: <input type="text" name="description"></p>
 
-</form>form>
+  <select name="user_id">
+    <% @user_id.each do |user|%>
+      <option vaule="<%= user_id%>"><%= user.email%></option> 
+    <% end %>
+  </select>
+</form>>
